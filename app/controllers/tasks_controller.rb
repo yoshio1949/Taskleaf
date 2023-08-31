@@ -31,7 +31,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
-      lender :new
+      render :new
     end
   end
 
